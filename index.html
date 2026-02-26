@@ -1,39 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <h1>
-        Todo-List
-    </h1>
-    <title>Todo List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="header">
+        <nav>
+            <h1>Perfume</h1>
+            <ul>
+                <li>Home |</li>
+                <li>products |</li>
+                <li>About Us |</li>
+                <li>Contact Us |</li>
+            </ul>
+        </nav>
 
-<input id="adding">
-<button id="adding_item" onclick="reading_text()">Add</button>
+    </div>
+    <div class="searchbar">
+        <input placeholder="search">
 
-<ul id="listing">
-    <li>Hello
-        <button id="delete_item" onclick="deleting_text(event)">Delete</button>
-    </li>
-</ul>
-<script>
-    // selecting the id's
-    var add = document.getElementById("adding_item")
-    var input = document.getElementById("adding")
-    var ul = document.getElementById("listing")
-    var remove = document.getElementById("delete_item")
+    </div>
+    <div class="products">
+        <div class="box">
+            <img src="perfume 1.webp ">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias illo excepturi totam vel ipsam neque rerum saepe cupiditate, iusto vitae.</p>
+        </div>
 
-    function reading_text(){
-        var listitem = document.createElement("li")
-        listitem.innerHTML = adding.value + "<button onclick='deleting_text(event)'>delete</button>"
-        ul.append(listitem)
-    }
-
-    function deleting_text(event){
-        event.target.parentElement.remove()
-    }
-</script>
-
+        <div class="box">
+            <img src="perfume 2.jpg ">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias illo excepturi totam vel ipsam neque rerum saepe cupiditate, iusto vitae.</p>
+        </div>
+        <div class="box">
+            <img src="perfume 2.jpg ">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias illo excepturi totam vel ipsam neque rerum saepe cupiditate, iusto vitae.</p>
+        </div>
+    </div>
+    <div class="about">
+        <h1 style="text-align: center;">About Us</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolorem, sequi, provident tempora adipisci aut placeat excepturi iusto vero nulla voluptatem officia accusamus voluptatum laboriosam quis quisquam? Vel placeat perferendis voluptate numquam molestias labore excepturi, optio pariatur corporis dicta minus nobis fuga neque sequi omnis, esse enim quos autem exercitationem quisquam quia. Ex, officia. Ad laborum numquam voluptatum neque libero laudantium dicta maxime consequatur placeat, ipsum incidunt aliquid repudiandae repellendus maiores voluptas, recusandae aliquam cupiditate enim eligendi accusamus perferendis. Enim, culpa. Architecto nulla quaerat ex molestiae nam? Velit corrupti numquam quidem rerum aperiam perspiciatis ut saepe veritatis inventore nam adipisci nobis molestiae odit incidunt quisquam modi, repellendus quo reprehenderit vel dolore! Odio nihil corporis nemo, obcaecati facilis neque sed vel dolorem asperiores tempore quos laboriosam dignissimos eius tempora non ex itaque saepe repellat? Ad ipsam architecto, doloremque velit quia repellendus dicta ex repellat labore! Iure itaque excepturi porro quam cupiditate vero. Dolor necessitatibus consectetur ut distinctio eius fuga velit cumque, ullam animi doloremque, totam expedita possimus eveniet ex reiciendis! Eos debitis iusto odit fugit facilis harum minus non possimus quas ducimus omnis quaerat earum ea ipsum facere inventore consectetur accusamus, rem commodi repellat aspernatur blanditiis. Beatae quam esse sequi natus.</p>
+    </div>
+    <div class="contact us">
+        <h4>Contact</h4>
+        <p>739868723648</p>
+        <p>hfjhewyi@gmail.com</p>
+        <p style="margin-top: 30px;font-size:10px ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nesciunt animi provident nihil at voluptatem beatae, non similique, cupiditate reprehenderit sequi impedit voluptates iusto quas ipsam architecto dolorum atque? Nostrum ab eos at quis iure vitae quae obcaecati minus dolor voluptate aspernatur doloremque dolorem unde nisi, veniam sequi omnis facere, aliquam voluptatem atque laudantium incidunt laborum. Corporis dolorem qui dolorum delectus accusantium, quaerat, eos nam earum est possimus eaque aut ut voluptatem quidem, dignissimos odio architecto. Id quos cum at quidem excepturi asperiores corporis magni. Consequatur, consectetur beatae omnis natus, distinctio possimus accusantium quibusdam, soluta repellat officia id inventore assumenda?</p>
+    </div>
 </body>
 </html>
