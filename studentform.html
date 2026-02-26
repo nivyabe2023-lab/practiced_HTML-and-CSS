@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+</head>
+<body>
+
+<h1 align="center">STUDENT FORM</h1>
+
+<form>
+<table border="1" align="center">
+    <tr>
+        <td>Name</td>
+        <td><input type="text" id="name"></td>
+    </tr>
+
+    <tr>
+        <td>Age</td>
+        <td><input type="number" id="age"></td>
+    </tr>
+
+    <tr>
+        <td>Gender</td>
+        <td>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+        </td>
+    </tr>
+
+    <tr>
+        <td>Course</td>
+        <td>
+            <select id="course">
+                <option>JAVASCRIPT</option>
+                <option>HTML</option>
+                <option>CSS</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Email</td>
+        <td><input type="email" id="email"></td>
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center">
+            <button onclick="call(event)">Save</button>
+        </td>
+    </tr>
+</table>
+</form>
+
+<br>
+
+<table border="1" align="center" id="output">
+<tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Course</th>
+    <th>Email</th>
+    <th>Action</th>
+</tr>
+</table>
+
+<script>
+function call(event) {
+    event.preventDefault(); // stop form refresh
+
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    var course = document.getElementById("course").value;
+    var email = document.getElementById("email").value;
+
+    var gender = "";
+    var g = document.getElementsByName("gender");
+    for (var i = 0; i < g.length; i++) {
+        if (g[i].checked) {
+            gender = g[i].value;
+        }
+    }
+
+    var table = document.getElementById("output");
+    var row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td>${name}</td>
+        <td>${age}</td>
+        <td>${gender}</td>
+        <td>${course}</td>
+        <td>${email}</td>
+        <td><button onclick="this.parentElement.parentElement.remove()">Delete</button></td>
+    `;
+
+    table.appendChild(row);
+}
+</script>
+
+</body>
+</html>
