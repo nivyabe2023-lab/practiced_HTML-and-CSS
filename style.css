@@ -1,47 +1,39 @@
-#recipe-title{
-    margin-left: 100px;;
-    padding:50px;
-    display:flex;
-    gap:2rem;
-    flex-wrap: wrap;
+body {
+    background-color: #22b3a7;
+    font-family: Arial, sans-serif;
 }
-@media (max-width:768px){
-     flex-direction :column;
+
+nav a {
+    color: blue;
+    margin: 0 6px;
+    text-decoration: underline;
 }
-    
-li:hover{
-    color:red;
+
+/* Hide all sections */
+.content {
+    display: none;
+    padding: 20px;
 }
-.ingredients{
-    border-color: black;
-    border-width:5px;
-    border-style: solid;
-    padding:5px;
-    background-color: palevioletred;
+
+/* Show clicked section */
+.content:target {
+    display: block;
 }
-.steps{
-    border-color: black;
-    border-width:5px;
-    border-style: solid;
-    padding:5px;
-    width:500px;
-    height:200px;
-    background-color: palevioletred;
+
+/* Show HOME by default when nothing is clicked */
+body:not(:has(.content:target)) #home {
+    display: block;
 }
-.nutrition{
-    border-color: black;
-    border-width:5px;
-    border-style: solid;
-    padding:5px;
-    background-color: palevioletred;
+
+.course-box {
+    border: 1px solid black;
+    background-color: white;
+    padding: 15px;
+    margin: 10px auto;
+    width: 300px;
+    text-align: center;
 }
-nav{
-    background-color: palevioletred;
-    border-color: black;
-    border-width:5px;
-    border-style: solid;
-    padding:5px;
-}
-main{
-    background-color: palevioletred;
+
+footer {
+    margin-top: 30px;
 }
